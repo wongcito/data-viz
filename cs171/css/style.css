@@ -1,0 +1,23 @@
+body {
+    padding-left: 20px;
+    font-family: 'Roboto';
+}
+
+h1 {
+    color: grey; 
+}
+
+#main {
+    font-size: 1.5em;
+}
+
+div.container {
+    max-width: 600px;
+    min-height: 380px;
+    align-content: center;
+}
+
+
+img.imgdetail {
+    width: 100%;
+}

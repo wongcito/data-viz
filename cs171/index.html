@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+      <meta charset="utf-8">
+      <title>Homework 1</title>
+      
+      <link rel="stylesheet" type="text/css"
+ href="https://fonts.googleapis.com/css?family=Roboto">
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <link rel="stylesheet" href="css/style.css">
+  </head>
+  
+  <body>
+    <h1>Homework 1</h1>
+      <p>Luis Wong <a href="twitter.com/wongcito" target="_blank">@wongcito</a></p>
+      <h2>Alarming hunger situation</h2>
+      <i>You can order each row by clicking the headers</i>
+      
+      <table class="table sortable">
+        <tr class="active" id="main" >
+            <th>Country</th>  
+            <th>1990</th>  
+            <th>2000</th>  
+            <th>2014</th>  
+        </tr>
+          <tr>
+            <td>Central African Republic</td>  
+            <td>51.9</td>  
+            <td>51.4</td>  
+            <td>46.4</td>  
+        </tr>
+          
+          <tr class="active" >
+            <td>Chad</td>  
+            <td>65</td>  
+            <td>52</td>  
+            <td>46.4</td>  
+        </tr>
+          <tr>
+            <td>Haiti</td>  
+            <td>52.1</td>  
+            <td>42.8</td>  
+            <td>37.3</td>  
+        </tr>
+          <tr class="active">
+            <td>Madagascar</td>  
+            <td>44.8</td>  
+            <td>44.1</td>  
+            <td>36.3</td>  
+        </tr>
+          <tr>
+            <td>Sierra Leone</td>  
+            <td>58.8</td>  
+            <td>53.5</td>  
+            <td>38.9</td>  
+        </tr>
+          <tr class="active">
+            <td>East Timor</td>  
+            <td>-</td>  
+            <td>-</td>  
+            <td>40.7</td>  
+        </tr>
+          <tr>
+            <td>Zambia</td>  
+            <td>47</td>  
+            <td>50.9</td>  
+            <td>41.1</td>  
+        </tr>
+      </table>
+      
+      <p>
+        <i>The Global Hunger Index (GHI) is designed to comprehensively measure and track hunger globally and by country and region. Calculated each year by the International Food Policy Research Institute (IFPRI), the GHI highlights successes and failures in hunger reduction and provides insights into the drivers of hunger. (IFPRI, 2015)</i>
+      </p>
+      
+      
+      
+      <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+  Look at the chart
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Look at the chart</h4>
+      </div>
+      <div class="modal-body">
+        
+          
+          
+          
+          
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+      
+      
+      
+      <h2>Good and Bad Visualizations</h2>
+      <i>Examples from the web</i>
+      <p></p>
+      
+      <div class="container">
+      
+      <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <img src="images/badviz1.png" alt="First example">
+    </div>
+    <div class="item">
+      <img src="images/badviz2.png" alt="Second example">
+    </div>
+    <div class="item">
+      <img src="images/goodviz1.png" alt="Third example">
+    </div>
+    <div class="item">
+      <img src="images/goodviz2.png" alt="Fourth example">
+    </div>
+    
+  </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+      
+          </div>
+          
+      
+      
+      <div class="container-fluid">
+         <div class="row">
+         <h3>Good Visualizations</h3>
+        <h4>Billetón Electoral  [<a href="http://www.ojo-publico.com/sites/apps/billeton-electoral/" target="_blank"]>Ojo Publico</a>]</h4>
+              <div class="row">
+  <div class="col-xs-4">
+         <img src="images/goodviz1.png" class="imgdetail" alt="Billetón Electoral" data-toggle="modal">          
+                  
+  </div>
+  <div class="col-xs-8">
+                  <h5>Design Choices</h5>
+                  <ul>
+                  <li>By using interactivity, users are able to input how much they earn to see a comparison with how much each presidential candidate earns.</li>
+                    <li>There is also a bar chart comparing each candidate.</li>
+                  </ul>
+                  <h5>Why it works</h5>
+                  <ul>
+                  <li>It was released during the presidential election in Peru so it gather a lot of attention.</li>
+                    <li>It was easy to use and share in social networks.</li>
+                  </ul>
+                  <h5>Goal and potential improvements</h5>
+                  <ul>
+                  <li>Show how much each presidential candidate earned and compare it with anyone.</li>
+                    <li>Introduce data visualization and newsapps to the Peruvian audience. </li>
+                      <li>The visualization could have had a better design or even include a simple newsgame. </li>
+                  </ul>
+</div>
+                  </div>
+             <h4>Zika Spread [<a href="http://www.miamiherald.com/news/health-care/article66790817.html" target="_blank"]>Miami Herald</a>]</h4>
+             
+             
+             
+              <div class="row">
+  <div class="col-xs-4">
+         <img src="images/goodviz2.png" class="imgdetail" alt="Billetón Electoral">          
+                  
+  </div>
+  <div class="col-xs-8">
+                  <h5>Design Choices</h5>
+                  <ul>
+                  <li>The article uses data visualization to show the state of infection of the Zika virus in Miami.</li>
+                    <li>It combines storytelling with interactive charts.</li>
+                  </ul>
+                  <h5>Why it works</h5>
+                  <ul>
+                  <li>Usually, these projects are done with non-current events, however this chart showed that these tools can also be useful in things that people care.</li>
+                    <li>Adding a storytelling layer gives readers more reasons to continue reading. </li>
+                  </ul>
+                  <h5>Goal and potential improvements</h5>
+                  <ul>
+                  <li>The goal was to introduce a visualization quickly, so it's useful to people.</li>
+                    <li>It could be improved by adding a search bar for people to introduce their ZIP code and know the state in their vecinity.</li>
+                  </ul>
+</div>
+                  </div>
+             
+             <h3>Bad Visualizations</h3>
+        <h4>Medal Leaders [<a href="http://www.dispatch.com" target="_blank"]>Columbus Dispatch</a>]</h4>
+              <div class="row">
+  <div class="col-xs-4">
+         <img src="images/badviz1.png" class="imgdetail" alt="Billetón Electoral">          
+                  
+  </div>
+  <div class="col-xs-8">
+                  <h5>Design Choices</h5>
+                  <ul>
+                  <li>Use of bars to compare Olympic medals for different contries.</li>
+                    <li>They wanted to create an easy to read chart.</li>
+                  </ul>
+                  <h5>Why it works (or not)</h5>
+                  <ul>
+                  <li>It's difficult to see the differences between each bar (8 > 9?)</li>
+                    <li>This type of bar chart it's not the best option to show this data.</li>
+                  </ul>
+                  <h5>Goal and potential improvements</h5>
+                  <ul>
+                  <li>Their goal was to compare three countries in the Olympics.</li>
+                      <li>It could be improved by using a series vertical bar chart.</li>
+                  </ul>
+</div>
+                  </div>
+             
+              <h4>Domestic Oil Production [<a href="http://www.bp.com" target="_blank"]>British Petroleum</a>]</h4>
+              <div class="row">
+  <div class="col-xs-4">
+         <img src="images/badviz2.png" class="imgdetail" alt="Billetón Electoral">          
+                  
+  </div>
+  <div class="col-xs-8">
+                  <h5>Design Choices</h5>
+                  <ul>
+                  <li>They tried to use a design that resembles to oil extraction.</li>
+                    <li>They wanted to make an easy to read chart by not introducing numbers or scales.</li>
+                  </ul>
+                  <h5>Why it works (or not)</h5>
+                  <ul>
+                  <li>It doesn't use a scale, so we don't know of what are we talking about.</li>
+                    <li>It doesn't show any data, it doesn't seem reliable.</li>
+                  </ul>
+                  <h5>Goal and potential improvements</h5>
+                  <ul>
+                  <li>The goal was to show how the US is the biggest oil producer in the World.</li>
+                    <li>It could be improved by adding a scale and better tags.</li>
+                  </ul>
+</div>
+                  </div>
+            
+        
+        </div>
+      </div>
+      
+      
+         <h3>Bonus Task</h3>
+      <i>You can hover over each bar to see each year's index. The chart was made using <a href="tableau.com/es-es" target="_blank">Tableau Public</a></i>
+      <p></p>
+      
+          <div class='tableauPlaceholder' id='viz1473516546071' style='position: relative'><noscript><a href='#'><img alt='Global Hunger Index (GHI) ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;GH&#47;GHI-Homework1CS171&#47;Hoja3&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='site_root' value='' /><param name='name' value='GHI-Homework1CS171&#47;Hoja3' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;GH&#47;GHI-Homework1CS171&#47;Hoja3&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1473516546071');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+          
+          
+        
+      <script src="https://code.jquery.com/jquery-latest.min.js"></script>          
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/sorttable.js"></script>
+  </body>
+  
+  
+</html>

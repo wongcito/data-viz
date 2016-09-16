@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>CS171 - HW2</title>
+
+		<!-- Load CSS libraries -->
+		<link rel="stylesheet" type="text/css"
+href="https://fonts.googleapis.com/css?family=Roboto">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+
+	<!-- ********************** ADD YOUR HTML-ELEMENTS HERE *********************** -->
+	<!-- Make sure to include a div-container with the id: 'chart-area' -->
+	<h1>Homework 2</h1>
+		<p>Luis Wong <a href="http://twitter.com/wongcito" target="_blank">@wongcito</a></p>
+		<h2>PizzaWorld - Insights & Statistics</h2>
+		<h3>Dataset summary</h3>
+		<div id="summary"></div>
+		<div id="chart-area"></div>
+
+		<div class="user-control">
+			<select id="cities" class="form-control" onchange="dataManipulation()">
+			  <option value="all">All cities</option>
+			  <option value="Boston">Boston</option>
+			  <option value="Cambridge">Cambridge</option>
+			  <option value="Somerville">Somerville</option>
+			</select>
+			<p></p>
+			<select id="order" class="form-control" onchange="dataManipulation()">
+			  <option value="allphones">All</option>
+			  <option value="web">Web</option>
+			  <option value="phones">Phones</option>
+			</select>
+		</div>
+
+		<h3>Design Analysis and Critique</h3>
+		<p>Based on <a href="http://visual.ly/nobels-no-degrees-english" target="_blank">this chart from Visually</a>:</p>
+		<i>Who is the audience?</i>
+		<p>General public interested in Nobel history. Not academics.</p>
+		<i>What questions does this visualization answer?</i>
+		<p>Several questions: age of people winning the noble prize, average age of nobel winners in general and per category, from which university they came, from which city, gender, etc.</p>
+		<i>What design principles best describe why it is good / bad?</i>
+		<p>Despite being a bit difficult to read because of the orientation it shows clearly the data and fulfills the objective it wants to prove.</p>
+		<i>Why do you like / dislike this visualization?</i>
+		<p>I like it because it's clear on how it shows the information and has guidelines on how to read the chart.</p>
+		<i>How could the data-ink ratio be improved? And can you suggest any other improvements?</i>
+		<p>Eliminating some of the horizontal lines.</p>
+		<h3>Design Creation and Bonus Task</h3>
+		<p>I'm not doing these sections this week.</p>
+
+	<!-- Load JS libraries: jQuery, bootstrap, D3, D3 Tooltips -->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/d3.min.js"></script>
+	<script src="js/d3-tip.js"></script>
+
+	<!-- Completed: Data loading, bar chart rendering -->
+	<script src="js/delivery-data.js"></script>
+	<script src="js/feedback-data.js"></script>
+	<script src="js/barchart.js"></script>
+
+	<!-- ****** TODO: FILTER DATA, DISPLAY BAR CHART & KEY FIGURES ****** -->
+	<script src="js/main.js"></script>
+	</body>
+</html>

@@ -28,14 +28,11 @@ function createVisualization() {
 	 //Filtering data
 
 	 var numberOfDeliveries = deliveryData.length;
-	 var averageDeliveryTime = totalDeliveryTime()/numberOfDeliveries;
+	 var averageDeliveryTime = Math.round(totalDeliveryTime()/numberOfDeliveries*100)/100;
 	 var numberOfPizzasDelivered = pizzasDelivered();
-	 var totalSales = calculateTotal();
+	 var totalSales = Math.round(calculateTotal()*100)/100;
 	 var numberOfFeedbacks = feedbackData.length;
 	 var typeOfFeedback = gettingQuality();
-
-
-
 
 	 function totalDeliveryTime(){
 		 var totalTime = 0;
@@ -73,12 +70,12 @@ function createVisualization() {
 				}
 
 			}
-			console.log(quality);
+
 			return quality;
 		}
 
 
-	 //Display key figures
+	 //Display key figures with the .innerHTML method
 
 	 document.getElementById("p1").innerHTML = "The total number of deliveries was " + numberOfDeliveries;
 	 document.getElementById("p2").innerHTML = "The total number of pizzas delivered was " + pizzasDelivered();
@@ -87,7 +84,7 @@ function createVisualization() {
 	 document.getElementById("p5").innerHTML = "The total number of feedbacks received were " + numberOfFeedbacks;
 	 document.getElementById("p6").innerHTML = "The number of high quality feedbacks was " + typeOfFeedback[2] + ", the number of medium quality feedbacks was " + typeOfFeedback[1] + " and the number of low quality feedbacks was " + typeOfFeedback[0];
 
-		//Display bar chart
+		//Display bar chart when the page loads
 
 
 
@@ -95,6 +92,9 @@ function createVisualization() {
 
 
 }
+
+	//Function that gets executed when the checkboxes change. It's important to notice that
+	//I have this function in the global scope so it's easier to call this from the html file
 
 function dataManipulation(){
 	var selectBoxCities = document.getElementById("cities");
@@ -105,8 +105,10 @@ function dataManipulation(){
 	var selectedValuePlatform = selectBoxPlatform.options[selectBoxPlatform.selectedIndex].value;
 	console.log(selectedValuePlatform);
 
+	//This array is for obtaining all the deliveries IDs so I can then use it to make a connection with the other DB
 	var listOfIds = [];
 
+	//Filtering according to cities. There should be a better and more eficient way to do this
 	function checkCity(elem){
 		if ((selectedValueCities === "all") && (selectedValuePlatform === "allphones")){
 			return deliveryData;
@@ -138,24 +140,24 @@ function dataManipulation(){
 	var filteredCities = deliveryData.filter(checkCity);
 	filteredCities
 
-	//var filteredFeedbacks = feedbackData.filter(checkId);
-	//filteredFeedbacks
+
 
 	for (i=0; i<filteredCities.length; i++){
 		listOfIds.push(filteredCities[i].delivery_id);
 	}
-	//console.log(listOfIds);
+	//Here I check the id to make the connection
 
 	var filteredFeedbacks = feedbackData.filter(checkId);
 	filteredFeedbacks
 
+	//This is probably not the most optimal way to do this, as .includes is not supported in all browsers
 	function checkId(el){
 			return listOfIds.includes(el.delivery_id);
 	}
 
 
 	renderBarChart(filteredCities);
-	//console.log(filteredCities.length);
+
 	var typeOfFeedbackFiltered = gettingQuality();
 	typeOfFeedbackFiltered
 
@@ -175,10 +177,11 @@ function dataManipulation(){
 		return quality;
 	}
 
+	//Here I am updating also each p element with the new values
 	document.getElementById("p1").innerHTML = "The total number of deliveries was " + filteredCities.length;
 	document.getElementById("p2").innerHTML = "The total number of pizzas delivered was " + pizzasDelivered();
-	document.getElementById("p3").innerHTML = "The average delivery time was " + totalDeliveryTime()/filteredCities.length + " minutes";
-	document.getElementById("p4").innerHTML = "The total amount of sales was of  " + calculateTotal() + " dollars";
+	document.getElementById("p3").innerHTML = "The average delivery time was " + Math.round(totalDeliveryTime()/filteredCities.length*100)/100 + " minutes";
+	document.getElementById("p4").innerHTML = "The total amount of sales was of  " + Math.round(calculateTotal()*100)/100 + " dollars";
 	document.getElementById("p5").innerHTML = "The total number of feedbacks received were " + filteredFeedbacks.length;
 	document.getElementById("p6").innerHTML = "The number of high quality feedbacks was " + typeOfFeedbackFiltered[2] + ", the number of medium quality feedbacks was " + typeOfFeedbackFiltered[1] + " and the number of low quality feedbacks was " + typeOfFeedbackFiltered[0];
 
@@ -200,7 +203,6 @@ function dataManipulation(){
 		 return totalTime;
 	 }
 
-	 //var totalSales = calculateTotal();
 	 function calculateTotal(){
 		 var total = 0;
 		 for (i=0; i<filteredCities.length; i++){
@@ -209,7 +211,7 @@ function dataManipulation(){
 		 return total;
 	 }
 
-	 //var typeOfFeedbackFiltered = gettingQuality();
+
 
 
 

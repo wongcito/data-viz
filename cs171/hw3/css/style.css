@@ -1,0 +1,44 @@
+
+
+/* ************ ADD YOUR CUSTOM STYLES ************ */
+
+
+
+/****************/
+/*   BAR-CHART  */
+/****************/
+body {
+    padding-left: 20px;
+    font-family: 'Roboto';
+    background-color: #512DA8;
+    color: white;
+}
+
+a {
+  color: #64FFDA;
+
+}
+
+#headertable {
+  background-color: #4527A0;
+}
+
+.table {
+  width: 75%;
+}
+
+.names {
+
+  fill: white;
+}
+
+.meters {
+
+  fill: white;
+}
+
+
+h2 {
+  padding-top: 0px;
+  margin-top: 0px;
+}

@@ -19,6 +19,16 @@ a {
 
 }
 
+.d3-tip {
+  line-height: 1;
+  font-weight: bold;
+  font-size: 0,5em;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border-radius: 2px;
+}
+
 #headertable {
   background-color: #4527A0;
 }

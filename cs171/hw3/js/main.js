@@ -9,9 +9,20 @@ var svg = d3.select("#columna1")
             .attr("width", w)
             .attr("height", h);
 
+var tip = d3.tip()
+    .attr("class", "d3-tip")
+    .html(function(d) {
+
+        //you would modify what you want to show up in box here.
+        return "Completed in " + d.completed;
+    });
+
+
 function dataLoaded(data){
 
 	data.sort(function(a,b){ return b.height_px - a.height_px; });
+
+  svg.call(tip);
 
 	var svgs = svg.selectAll("rect")
    .data(data)
@@ -40,7 +51,9 @@ function dataLoaded(data){
 	 	 document.getElementById("floorDet").innerHTML =  d.floors;
 	 	 document.getElementById("yearDet").innerHTML =  d.completed;
 	 document.getElementById("myImg").src = "data/img/" + d.image;
-		});
+		})
+    .on("mouseover", tip.show)
+    .on("mouseout", tip.hide);
 
 
 
